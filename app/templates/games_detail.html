@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/CSS/games_detail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/make_service">Создать услугу</a>
+        <div class="catalog-button">
+  <button onclick="showCatalogOptions()">Каталог</button>
+  <div id="catalogOptions" class="catalog-options">
+    <a href="/games_service">Игры</a>
+    <a href="/programming_service">Программирование</a>
+  </div>
+</div>
+
+<script>
+  function showCatalogOptions() {
+    var options = document.getElementById("catalogOptions");
+    options.classList.toggle("show");
+  }
+</script>
+    </nav>
+
+
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md2 row-cols-lg-3">
+
+            <div class="col">
+                <div class="card">
+                    <img src="/static/{{service.img}}" alt="My image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{service.title}}</h5>
+                        <p class="card-text">
+                            {{service.text}}
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

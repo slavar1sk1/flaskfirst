@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/static/JS/make_service.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/CSS/make_service.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/make_service">Создать услугу</a>
+    </nav>
+
+    <h2>Создать услугу:</h2>
+
+        {{form.hidden_tag()}}
+        <div class="my-form">
+            <div class="form-group" >
+            {{form.img.label}}
+            {{form.img(id='img')}}
+        </div>
+        <div class="form-group">
+            {{form.title.label}}
+            {{form.title(id='title')}}
+        </div>
+        <div class="form-group">
+            {{form.intro.label}}
+            {{form.intro(id='intro')}}
+        </div>
+        <div class="form-group">
+            {{form.text.label}}
+            {{form.text(id='text')}}
+        </div>
+        <div class="form-group">
+            {{form.catalog.label}}
+            {{form.catalog(id='catalog')}}
+        </div>
+        <div class="form-group">
+            {{form.price.label}}
+            {{form.price(id='price')}}
+        </div>
+        <div class="form-group">
+            {{form.submit(id='confirm')}}
+        </div>
+            <h2 id="error"></h2>
+        </div>
+
+
+</body>
+</html>

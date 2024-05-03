@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/static/JS/cancel_product.js"></script>
+    <link rel="stylesheet" href="/static/CSS/games.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/make_service">Создать услугу</a>
+        <div class="catalog-button">
+  <button onclick="showCatalogOptions()">Каталог</button>
+  <div id="catalogOptions" class="catalog-options">
+    <a href="/games_service">Игры</a>
+    <a href="/programming_service">Программирование</a>
+  </div>
+</div>
+
+<script>
+  function showCatalogOptions() {
+    var options = document.getElementById("catalogOptions");
+    options.classList.toggle("show");
+  }
+</script>
+
+  <div class="yellow-square">
+    <a href="/cart" class="cart-icon">
+        <div class="cart-counter">{{session['counter']}}</div>
+        <img src="/static/shopping-cart_711897.png" alt="Корзина">
+    </a>
+</div>
+        <div class="price">{{session['price_counter']}}€</div>
+    </nav>
+
+
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md2 row-cols-lg-3">
+            {% for el in cart_services %}
+            <div class="col" id="card-{{el.id}}">
+                <div class="card">
+                    <img src="/static/{{el.img}}" alt="My image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">{{el.title}}</h5>
+                        <p class="card-text">
+                            {{el.intro}}
+                        </p>
+                        <h2 class="card-text">
+                        Цена: <span class="text-success">{{el.price}}€</span>
+                        </h2>
+                        <a href="games_service/{{el.id}}" class="btn btn-warning">Детальнее</a>
+                        <button data-id="{{el.id}}" class="btn btn-danger cancel-btn">Отменить</button>
+
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="payment-container">
+        <div class="payment-info">
+            <p>Всего:</p>
+            <p class="amount price">{{session['price_counter']}}€</p>
+        </div>
+        <button class="pay-button">Перейти к оплате</button>
+    </div>
+
+
+</body>
+</html>
