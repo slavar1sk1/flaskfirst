@@ -66,25 +66,22 @@ def login(id):
 def log_in():
     form = Login()
     print('aaa')
-    if request.method == 'POST':
+    if form.validate_on_submit():
         print('ok')
-        password = request.form['password']
-        username = request.form['username']
+        password = form.password.data
+        username = form.username.data
 
         cache.set('username', username)
         cache.get('username')
 
         user = User.query.filter_by(username=username).first()
-        if not user:
-            return {'login': True, 'login_error': True}
-        elif not user.check_password(password):
-            return {'password': True, 'password_error': True}
+        if not user or not user.check_password(password):
+            return render_template('login.html', message='1', form=form)
         else:
             login_user(user, remember=form.remember_me.data)
-            print('okay')
             return redirect('/')
-    else:
-        return render_template('login.html', form=form)
+    return render_template('login.html', form=form)
+
 
 @app.route('/')
 @login_required
