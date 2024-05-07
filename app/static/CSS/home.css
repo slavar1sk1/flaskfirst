@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('/static/360_F_640102243_0DRXY0pIGk2mCJMZt2arrM3ZgD8H3wpr-fotor-20240313191824.jpg');
+    background-size: cover; /* Растягивает изображение, чтобы оно полностью покрывало задний фон */
+  background-position: center center; /* Выравнивание изображения по центру */
+  background-repeat: no-repeat; /* Запрет повторения изображения */
+  height: 100vh; /* Сделать высоту фона равной высоте окна браузера */
+  margin: 0; /* Убирает отступы по умолчанию */
+
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 55px;
+    margin-left: 35px; /* Регулирует отступ слева, установите нужное значение */
+}
+
+nav a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px; /* Размер шрифта по умолчанию */
+  transition: color 0.6s ease, font-size 0.6s ease;
+
+}
+
+nav a:hover {
+  color: #ffcc00;
+  font-size: 18px; /* Размер шрифта при наведении мыши */
+}
+
+.catalog {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.catalog-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.catalog-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.catalog-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cart {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cart-button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+h2 {
+
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 85px;
+  margin-left: 90px;
+  margin-top: 280px;
+  margin-bottom: 0}
+
+.my-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ffd700, #ffa500); /* Желто-золотой градиент */
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff; /* Цвет текста кнопки */
+    text-decoration: none; /* Удаление подчеркивания у ссылки */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Эффект свечения */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); /* Эффект тени */
+    transition: all 0.3s ease; /* Плавный переход */
+    margin-left: 155px;
+    width: 250px;
+    height: 35px;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.my-button:hover {
+    background: linear-gradient(135deg, #ffd700, #ffc700); /* Изменение градиента при наведении */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Усиление эффекта свечения */
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9); /* Усиление эффекта тени */
+}
+
+.catalog-button {
+  position: relative;
+  display: inline-block;
+}
+
+.catalog-options {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.catalog-options a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.catalog-options a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+.yellow-square {
+    background-color: #FFD700; /* желтозолотой цвет квадрата */
+    margin-left: 1120px;
+    position: relative;
+    width: 70px;
+    height:60px;
+    border-radius: 10px;
+    display:inline-block;
+}
+
+.cart-icon {
+    margin-bottom:10px;
+    margin-left: 10px;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.cart-counter::after {
+    content: attr(data-count);
+    font-size: 12px;
+}
+
+.cart-icon img {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+
+}
+
+.price {
+    display: inline-block;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    font-size: 37px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+    }

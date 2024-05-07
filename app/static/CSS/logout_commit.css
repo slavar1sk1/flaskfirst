@@ -1,0 +1,42 @@
+body{
+background-image: url('/static/360_F_640102243_0DRXY0pIGk2mCJMZt2arrM3ZgD8H3wpr-fotor-20240313191824.jpg');
+  background-size: cover; /* Растягивает изображение, чтобы оно полностью покрывало задний фон */
+  background-position: center center; /* Выравнивание изображения по центру */
+  background-repeat: no-repeat; /* Запрет повторения изображения */
+  height: 100vh; /* Сделать высоту фона равной высоте окна браузера */
+  margin: 0; /* Убирает отступы по умолчанию */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+h1 {
+  font-size: 24px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+a {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+a.yes {
+  background-color: #ff0000;
+  color: #fff;
+}
+a.no {
+  background-color: #008000;
+  color: #fff;
+}

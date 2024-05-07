@@ -1,0 +1,115 @@
+body {
+    background-image: url('/static/360_F_640102243_0DRXY0pIGk2mCJMZt2arrM3ZgD8H3wpr-fotor-20240313191824.jpg'); /* Замените 'background.jpg' на ваше изображение фона */
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif; /* Используйте желаемый шрифт */
+    color: #333; /* Цвет текста */
+}
+
+nav {
+    margin-top: 55px;
+    margin-left: 35px; /* Регулирует отступ слева, установите нужное значение */
+}
+
+nav a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px; /* Размер шрифта по умолчанию */
+  transition: color 0.6s ease, font-size 0.6s ease;
+
+}
+
+nav a:hover {
+  color: #ffcc00;
+  font-size: 18px; /* Размер шрифта при наведении мыши */
+}
+
+.my-form {
+    width: 50%; /* Ширина формы */
+    margin-left: 470px;
+    background-color: rgba(255, 255, 255, 0.8); /* Цвет фона формы с прозрачностью */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%; /* Растягиваем элементы ввода на всю ширину формы */
+    padding: 10px;
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 5px;
+}
+
+select {
+    width: 100%; /* Растягиваем выпадающий список на всю ширину формы */
+    padding: 10px;
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: auto; /* Ширина кнопки по содержимому */
+    padding: 10px 20px;
+    background-color: #007bff; /* Цвет фона кнопки */
+    background: linear-gradient(135deg, #ffd700, #ffa500); /* Желто-золотой градиент */
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff; /* Цвет текста кнопки */
+    text-decoration: none; /* Удаление подчеркивания у ссылки */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Эффект свечения */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); /* Эффект тени */
+    transition: all 0.3s ease; /* Плавный переход */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 325px;
+    width: 230px;
+    height: 45px;
+
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #ffd700, #ffc700); /* Изменение градиента при наведении */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Усиление эффекта свечения */
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9); /* Усиление эффекта тени */
+}
+
+h2 {
+font-size: 30px;
+text-align: center;
+color: white;
+margin-top: 30px;}
+
+input[type="file"] {
+    display: inline-block;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#error {
+    color: black;
+    }
+
+

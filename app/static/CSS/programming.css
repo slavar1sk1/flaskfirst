@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+
+    background: linear-gradient(to bottom, #3498db, #87ceeb, #cccccc); /* Используйте нужные вам цвета */
+
+}
+
+.catalog-button {
+  position: relative;
+  display: inline-block;
+}
+
+.catalog-options {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.catalog-options a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.catalog-options a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+nav {
+    margin-top: 55px;
+    margin-left: 35px; /* Регулирует отступ слева, установите нужное значение */
+}
+
+nav a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px; /* Размер шрифта по умолчанию */
+  transition: color 0.6s ease, font-size 0.6s ease;
+
+}
+
+nav a:hover {
+  color: #ffcc00;
+  font-size: 18px; /* Размер шрифта при наведении мыши */
+}
+
+.catalog {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.catalog-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.catalog-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.catalog-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cart {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cart-button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.image-container {
+    position: relative; /* Для позиционирования псевдоэлемента */
+    display: inline-block; /* Для автоматической подгонки размеров к содержимому */
+}
+
+.image-container::after {
+    content: ""; /* Обязательно должно быть содержимое для псевдоэлемента */
+    position: absolute; /* Позиционируем элемент абсолютно относительно его ближайшего позиционированного предка */
+    top: 100%; /* Помещаем его под изображением */
+    left: 0;
+    width: 100%; /* Ставим ширину равной ширине родительского элемента */
+    height: calc(100vh - 100%); /* Высота будет равна высоте окна браузера минус высота изображения */
+    background-color: blue; /* Цвет фона */
+    z-index: -1; /* Помещаем фон под изображение */
+}
+
+.card {
+margin-top: 29px;}
+
+.yellow-square {
+    background-color: #FFD700; /* желтозолотой цвет квадрата */
+    margin-left: 1220px;
+    position: relative;
+    width: 70px;
+    height:60px;
+    border-radius: 10px;
+    display:inline-block;
+    margin-top: 13px;
+}
+
+.cart-icon {
+    margin-bottom:10px;
+    margin-left: 10px;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.cart-counter::after {
+    content: attr(data-count);
+    font-size: 12px;
+}
+
+.cart-icon img {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+
+}
+
+
+.price {
+    display: inline-block;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    font-size: 37px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+    }

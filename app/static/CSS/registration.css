@@ -1,0 +1,76 @@
+body {
+    background-image: url('/static/360_F_640102243_0DRXY0pIGk2mCJMZt2arrM3ZgD8H3wpr-fotor-20240313191824.jpg');
+
+    background-size: cover; /* Растягивает изображение, чтобы оно полностью покрывало задний фон */
+  background-position: center center; /* Выравнивание изображения по центру */
+  background-repeat: no-repeat; /* Запрет повторения изображения */
+  height: 100vh; /* Сделать высоту фона равной высоте окна браузера */
+  margin: 0; /* Убирает отступы по умолчанию */
+}
+
+.my-form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h2 {
+    color: red;
+    text-align: center;
+}
+
+
+input[type="submit"] {
+    width: auto; /* Ширина кнопки по содержимому */
+    padding: 10px 20px;
+    background-color: #007bff; /* Цвет фона кнопки */
+    background: linear-gradient(135deg, #ffd700, #ffa500); /* Желто-золотой градиент */
+    border: none;
+    border-radius: 15px;
+
+    color: #fff; /* Цвет текста кнопки */
+    text-decoration: none; /* Удаление подчеркивания у ссылки */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Эффект свечения */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); /* Эффект тени */
+    transition: all 0.3s ease; /* Плавный переход */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 310px;
+    margin-top: 10px;
+    width: 230px;
+    height: 45px;
+
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #ffd700, #ffc700); /* Изменение градиента при наведении */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Усиление эффекта свечения */
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9); /* Усиление эффекта тени */
+}
